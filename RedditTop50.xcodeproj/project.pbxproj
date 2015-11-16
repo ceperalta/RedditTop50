@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		2A001E8C1BFA452A003117BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001E8B1BFA452A003117BB /* main.m */; };
 		2A001E8F1BFA452A003117BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001E8E1BFA452A003117BB /* AppDelegate.m */; };
-		2A001E921BFA452A003117BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001E911BFA452A003117BB /* ViewController.m */; };
 		2A001E951BFA452A003117BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A001E931BFA452A003117BB /* Main.storyboard */; };
 		2A001E971BFA452A003117BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A001E961BFA452A003117BB /* Assets.xcassets */; };
 		2A001E9A1BFA452A003117BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A001E981BFA452A003117BB /* LaunchScreen.storyboard */; };
+		2A001EA41BFA4561003117BB /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001EA31BFA4561003117BB /* DAO.m */; settings = {ASSET_TAGS = (); }; };
+		2A001EA81BFA4B12003117BB /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001EA71BFA4B12003117BB /* Article.m */; settings = {ASSET_TAGS = (); }; };
+		2A001EAE1BFA6B89003117BB /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001EAD1BFA6B89003117BB /* TableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2A001EB11BFA71C7003117BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001EB01BFA71C7003117BB /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,18 @@
 		2A001E8B1BFA452A003117BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A001E8D1BFA452A003117BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2A001E8E1BFA452A003117BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2A001E901BFA452A003117BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2A001E911BFA452A003117BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2A001E941BFA452A003117BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A001E961BFA452A003117BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A001E991BFA452A003117BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A001E9B1BFA452A003117BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A001EA21BFA4561003117BB /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
+		2A001EA31BFA4561003117BB /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
+		2A001EA61BFA4B12003117BB /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		2A001EA71BFA4B12003117BB /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		2A001EAC1BFA6B89003117BB /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		2A001EAD1BFA6B89003117BB /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		2A001EAF1BFA71C7003117BB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2A001EB01BFA71C7003117BB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,12 @@
 		2A001E891BFA452A003117BB /* RedditTop50 */ = {
 			isa = PBXGroup;
 			children = (
+				2A001EB31BFA7824003117BB /* views */,
+				2A001EB21BFA781D003117BB /* widgets */,
+				2A001EA51BFA4B01003117BB /* models */,
+				2A001EA11BFA453B003117BB /* tools */,
 				2A001E8D1BFA452A003117BB /* AppDelegate.h */,
 				2A001E8E1BFA452A003117BB /* AppDelegate.m */,
-				2A001E901BFA452A003117BB /* ViewController.h */,
-				2A001E911BFA452A003117BB /* ViewController.m */,
 				2A001E931BFA452A003117BB /* Main.storyboard */,
 				2A001E961BFA452A003117BB /* Assets.xcassets */,
 				2A001E981BFA452A003117BB /* LaunchScreen.storyboard */,
@@ -77,6 +88,42 @@
 				2A001E8B1BFA452A003117BB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A001EA11BFA453B003117BB /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				2A001EA21BFA4561003117BB /* DAO.h */,
+				2A001EA31BFA4561003117BB /* DAO.m */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		2A001EA51BFA4B01003117BB /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2A001EA61BFA4B12003117BB /* Article.h */,
+				2A001EA71BFA4B12003117BB /* Article.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		2A001EB21BFA781D003117BB /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				2A001EAC1BFA6B89003117BB /* TableViewCell.h */,
+				2A001EAD1BFA6B89003117BB /* TableViewCell.m */,
+			);
+			name = widgets;
+			sourceTree = "<group>";
+		};
+		2A001EB31BFA7824003117BB /* views */ = {
+			isa = PBXGroup;
+			children = (
+				2A001EAF1BFA71C7003117BB /* ViewController.h */,
+				2A001EB01BFA71C7003117BB /* ViewController.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +196,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A001E921BFA452A003117BB /* ViewController.m in Sources */,
+				2A001EB11BFA71C7003117BB /* ViewController.m in Sources */,
+				2A001EA81BFA4B12003117BB /* Article.m in Sources */,
+				2A001EAE1BFA6B89003117BB /* TableViewCell.m in Sources */,
+				2A001EA41BFA4561003117BB /* DAO.m in Sources */,
 				2A001E8F1BFA452A003117BB /* AppDelegate.m in Sources */,
 				2A001E8C1BFA452A003117BB /* main.m in Sources */,
 			);
@@ -262,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RedditTop50/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ceperalta.RedditTop50;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RedditTop50/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ceperalta.RedditTop50;
 				PRODUCT_NAME = "$(TARGET_NAME)";
