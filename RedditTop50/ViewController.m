@@ -59,8 +59,9 @@
     
     Article *art = (Article*)[_arrArticles objectAtIndex:indexPath.row];
     cell.title.text = art.title;
-    cell.author.text = art.author;
+    cell.author.text = [NSString stringWithFormat:@"by %@", art.author];
     cell.hours.text = art.entryDateFormatedXAgoStyle;
+    cell.comments.text = [NSString stringWithFormat:@"%@ comments", art.numbersOfComments];
     
     return cell;
 }

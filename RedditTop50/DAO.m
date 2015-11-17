@@ -49,7 +49,7 @@
                  art.author = [dataForArticleD objectForKey:@"author"];
                  art.utcUnixTimeStampEntryDate = [[dataForArticleD objectForKey:@"created_utc"] doubleValue];
                  art.thumbnailURL = [dataForArticleD objectForKey:@"thumbnail"];
-                 art.numbersOfComments = [[dataForArticleD objectForKey:@"num_comments"] doubleValue];
+                 art.numbersOfComments = [dataForArticleD objectForKey:@"num_comments"];
                  
                  [_articlesMD addObject:art];
                  

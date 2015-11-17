@@ -16,6 +16,6 @@
 @property (nonatomic,assign) double utcUnixTimeStampEntryDate;
 @property (nonatomic,strong) NSString *thumbnailURL;
 @property (nonatomic,assign) BOOL haveThumbnail;
-@property (nonatomic,assign) double numbersOfComments;
+@property (nonatomic,assign) NSString *numbersOfComments;
 
 @end

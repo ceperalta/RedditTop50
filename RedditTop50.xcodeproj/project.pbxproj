@@ -73,10 +73,6 @@
 				2A001EA11BFA453B003117BB /* tools */,
 				2A001E8D1BFA452A003117BB /* AppDelegate.h */,
 				2A001E8E1BFA452A003117BB /* AppDelegate.m */,
-				2A001E931BFA452A003117BB /* Main.storyboard */,
-				2A001E961BFA452A003117BB /* Assets.xcassets */,
-				2A001E981BFA452A003117BB /* LaunchScreen.storyboard */,
-				2A001E9B1BFA452A003117BB /* Info.plist */,
 				2A001E8A1BFA452A003117BB /* Supporting Files */,
 			);
 			path = RedditTop50;
@@ -85,6 +81,9 @@
 		2A001E8A1BFA452A003117BB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2A001E961BFA452A003117BB /* Assets.xcassets */,
+				2A001E9B1BFA452A003117BB /* Info.plist */,
+				2A001E981BFA452A003117BB /* LaunchScreen.storyboard */,
 				2A001E8B1BFA452A003117BB /* main.m */,
 			);
 			name = "Supporting Files";
@@ -120,6 +119,7 @@
 		2A001EB31BFA7824003117BB /* views */ = {
 			isa = PBXGroup;
 			children = (
+				2A001E931BFA452A003117BB /* Main.storyboard */,
 				2A001EAF1BFA71C7003117BB /* ViewController.h */,
 				2A001EB01BFA71C7003117BB /* ViewController.m */,
 			);
