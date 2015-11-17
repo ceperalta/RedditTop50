@@ -23,7 +23,7 @@
 }
 
 
--(BOOL)getHaveThumbnail{
+-(BOOL)haveThumbnail{
     return self.thumbnailURL.length > 5;
 }
 

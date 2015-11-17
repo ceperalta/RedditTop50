@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *author;
 @property (weak, nonatomic) IBOutlet UILabel *comments;
 @property (weak, nonatomic) IBOutlet UILabel *hours;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbImageIM;
 
 @end

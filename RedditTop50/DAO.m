@@ -51,7 +51,15 @@
                  art.thumbnailURL = [dataForArticleD objectForKey:@"thumbnail"];
                  art.numbersOfComments = [dataForArticleD objectForKey:@"num_comments"];
                  
-                 [_articlesMD addObject:art];
+                 if ([[dataForArticleD allKeys] containsObject:@"thumbnail"]) {
+                     art.thumbnailURL = [dataForArticleD objectForKey:@"thumbnail"];
+                     NSArray *previeImagesA = [[dataForArticleD objectForKey:@"preview"] objectForKey:@"images"];
+                     art.fullSizeImageURL = [previeImagesA objectAtIndex:0];
+                     [_articlesMD addObject:art];
+                 }else{
+                     art.thumbnailURL = @"";
+                 }
+                 
                  
              }
              

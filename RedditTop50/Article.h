@@ -17,5 +17,6 @@
 @property (nonatomic,strong) NSString *thumbnailURL;
 @property (nonatomic,assign) BOOL haveThumbnail;
 @property (nonatomic,assign) NSString *numbersOfComments;
+@property (nonatomic,assign) NSString *fullSizeImageURL;
 
 @end

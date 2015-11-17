@@ -57,12 +57,31 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TableViewCell *cell = (TableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"ArticleCell" forIndexPath:indexPath];
     
+    
     Article *art = (Article*)[_arrArticles objectAtIndex:indexPath.row];
     cell.title.text = art.title;
     cell.author.text = [NSString stringWithFormat:@"by %@", art.author];
     cell.hours.text = art.entryDateFormatedXAgoStyle;
     cell.comments.text = [NSString stringWithFormat:@"%@ comments", art.numbersOfComments];
+    cell.thumbImageIM.hidden = true;
     
+    if (art.haveThumbnail) {
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,  0ul);
+        NSIndexPath *indexBeforeBackground = indexPath;
+        dispatch_async(queue, ^{
+            NSURL *url = [NSURL URLWithString:art.thumbnailURL];
+            UIImage *img = [UIImage imageWithCIImage:[CIImage imageWithContentsOfURL:url]];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                if ([tableView cellForRowAtIndexPath:indexBeforeBackground]) {
+                    cell.thumbImageIM.image = img;
+                    cell.thumbImageIM.hidden = false;
+                }
+            });
+        });
+    }
+    
+    
+      
     return cell;
 }
 
