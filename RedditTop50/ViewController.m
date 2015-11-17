@@ -10,9 +10,11 @@
 #import "DAO.h"
 #import "Article.h"
 #import "TableViewCell.h"
+#import "WebVC.h"
 
 @interface ViewController ()<ArticlesArriveProtocol, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityI;
 @property (nonatomic, strong) NSArray *arrArticles;
 
 @end
@@ -21,9 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _arrArticles = [[NSArray alloc] init];
-    self.tableView.dataSource = self;
     
+    self.title = @"Reddit Top 50";
+    
+    [self.activityI startAnimating];
+    
+    _arrArticles = [[NSArray alloc] init];
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     self.tableView.hidden = true;
     
     DAO *dao = [[DAO alloc] init];
@@ -38,6 +46,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
+        [self.activityI stopAnimating];
         self.tableView.hidden = false;
     });
 }
@@ -53,12 +62,31 @@
     return [_arrArticles count];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        UITableViewCell * cell = (UITableViewCell*)sender;
+        NSIndexPath *indexPathSelectedCell = [self.tableView indexPathForCell:cell];
+        WebVC *webVC = (WebVC*)segue.destinationViewController;
+        
+        Article *art = (Article*)[_arrArticles objectAtIndex:indexPathSelectedCell.row];
+        webVC.urlImage = art.fullSizeImageURL;
+    }
+    
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TableViewCell *cell = (TableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"ArticleCell" forIndexPath:indexPath];
-    
-    
+   
     Article *art = (Article*)[_arrArticles objectAtIndex:indexPath.row];
+    
+    TableViewCell *cell = nil;
+    
+    if (art.haveThumbnail) {
+        cell = (TableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"ArticleCell" forIndexPath:indexPath];
+    }else{
+        cell = (TableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"ArticleCellNOImage" forIndexPath:indexPath];
+    }
+ 
     cell.title.text = art.title;
     cell.author.text = [NSString stringWithFormat:@"by %@", art.author];
     cell.hours.text = art.entryDateFormatedXAgoStyle;
@@ -79,11 +107,11 @@
             });
         });
     }
+  
     
-    
-      
     return cell;
 }
+
 
 
 @end

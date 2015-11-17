@@ -16,6 +16,7 @@
 		2A001EA81BFA4B12003117BB /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001EA71BFA4B12003117BB /* Article.m */; settings = {ASSET_TAGS = (); }; };
 		2A001EAE1BFA6B89003117BB /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001EAD1BFA6B89003117BB /* TableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		2A001EB11BFA71C7003117BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001EB01BFA71C7003117BB /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2A001EB61BFB7742003117BB /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A001EB51BFB7742003117BB /* WebVC.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		2A001EAD1BFA6B89003117BB /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		2A001EAF1BFA71C7003117BB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2A001EB01BFA71C7003117BB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2A001EB41BFB7742003117BB /* WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVC.h; sourceTree = "<group>"; };
+		2A001EB51BFB7742003117BB /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				2A001E931BFA452A003117BB /* Main.storyboard */,
 				2A001EAF1BFA71C7003117BB /* ViewController.h */,
 				2A001EB01BFA71C7003117BB /* ViewController.m */,
+				2A001EB41BFB7742003117BB /* WebVC.h */,
+				2A001EB51BFB7742003117BB /* WebVC.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				2A001EB11BFA71C7003117BB /* ViewController.m in Sources */,
 				2A001EA81BFA4B12003117BB /* Article.m in Sources */,
 				2A001EAE1BFA6B89003117BB /* TableViewCell.m in Sources */,
+				2A001EB61BFB7742003117BB /* WebVC.m in Sources */,
 				2A001EA41BFA4561003117BB /* DAO.m in Sources */,
 				2A001E8F1BFA452A003117BB /* AppDelegate.m in Sources */,
 				2A001E8C1BFA452A003117BB /* main.m in Sources */,

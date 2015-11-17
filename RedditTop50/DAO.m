@@ -53,9 +53,14 @@
                  
                  if ([[dataForArticleD allKeys] containsObject:@"thumbnail"]) {
                      art.thumbnailURL = [dataForArticleD objectForKey:@"thumbnail"];
+                     
                      NSArray *previeImagesA = [[dataForArticleD objectForKey:@"preview"] objectForKey:@"images"];
-                     art.fullSizeImageURL = [previeImagesA objectAtIndex:0];
+                     NSDictionary *dicImagesSources = [previeImagesA objectAtIndex:0];
+                     
+                     art.fullSizeImageURL = [[dicImagesSources objectForKey:@"source"] objectForKey:@"url"];
+              
                      [_articlesMD addObject:art];
+                 
                  }else{
                      art.thumbnailURL = @"";
                  }
